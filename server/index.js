@@ -17,6 +17,10 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', Router);
 
+app.get('/', (req, res) => {
+    res.send('API is Running');
+})
+
 const PORT=8000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
